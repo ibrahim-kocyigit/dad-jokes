@@ -1,3 +1,3 @@
 #dad-jokes project
 
-A dad jokes application.
+A small dad jokes application built by MVC architectural pattern. Jokes API from https://icanhazdadjoke.com/.

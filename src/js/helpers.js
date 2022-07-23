@@ -1,10 +1,10 @@
-import { TIMEOUT_SECONDS } from './config.js';
+import { TIMEOUT_SECONDS } from "./config.js";
 
 const timeOut = function (seconds) {
   return new Promise(function (_, reject) {
     setTimeout(function () {
       reject(
-        new Error(`Request took too long! Timeout after ${seconds} second`)
+        new Error(`Request took too long! Timeout after ${seconds} seconds.`)
       );
     }, seconds * 1000);
   });
@@ -14,7 +14,7 @@ export const getJSON = async function (url) {
   try {
     const fetchData = fetch(url, {
       headers: {
-        Accept: 'application/json',
+        Accept: "application/json",
       },
     });
     const res = await Promise.race([fetchData, timeOut(TIMEOUT_SECONDS)]);

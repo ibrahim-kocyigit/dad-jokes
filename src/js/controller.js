@@ -1,8 +1,8 @@
-import '../styles/main.css';
-import favicon from '../img/favicon.png';
+import "../styles/main.css";
+import favicon from "../img/favicon.png";
 
-import * as model from './model';
-import jokeView from './jokeView.js';
+import * as model from "./model.js";
+import jokeView from "./views/jokeView.js";
 
 const controlNewJoke = async function () {
   await model.getRandomJoke();
